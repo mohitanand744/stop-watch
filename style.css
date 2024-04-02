@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.stopWatch-Container {
+  width: 70%;
+  min-height: 100%;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 6rem;
+    font-size: 4.5rem;
+    letter-spacing: 6px;
+  }
+}
+
+.stopWatch {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  border-radius: 50%;
+  margin: 2rem auto;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.596) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.61) 0px 30px 60px -30px,
+    rgba(12, 12, 12, 0.664) 0px -2px 6px 0px inset;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 12px solid #ffffff;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    rotate: 26deg;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    background: #ffffff;
+    top: 50px;
+    left: -18px;
+  }
+
+  & .mins {
+    font-size: 3.8rem;
+  }
+  & .sec {
+    font-size: 3.2rem;
+  }
+  & .msec {
+    font-size: 2.9rem;
+  }
+}
+
+.btn-container {
+  display: flex;
+  gap: 3rem;
+  margin: 4rem auto;
+  justify-content: center;
+}
+
+.btn {
+  width: 90px;
+  height: 90px;
+  font-size: 1.8rem;
+  display: flex;
+  letter-spacing: 2px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  color: #ffff;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(12, 12, 12, 0.35) 0px -2px 6px 0px inset;
+  font-family: "roboto", system-ui;
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+
+  &:hover {
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.856) 0px 30px 60px -20px,
+      rgba(0, 0, 0, 0.35) 0px -2px 6px 0px inset;
+    scale: 1.08;
+  }
+  &:active {
+    background: #000000dd;
+    scale: 0.8;
+  }
+}
+.hidden {
+  visibility: hidden;
+}
+.laps-container {
+  height: 20.5rem;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & p {
+    font-size: 3rem;
+  }
+  & .time {
+    margin-left: 3rem;
+  }
+}
+
+@media screen and (width < 500px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (width < 380px) {
+  html {
+    font-size: 47%;
+  }
+}
