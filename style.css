@@ -31,22 +31,15 @@ body {
   font-family: "Rubik Doodle Shadow", system-ui;
   font-weight: 400;
   font-style: normal;
-  display: flex;
-  justify-content: center;
 
   &::-webkit-scrollbar {
     display: none;
   }
 }
 .stopWatch-Container {
-  width: 70%;
   min-height: 100%;
   color: #fff;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  margin: 0 auto;
 
   & h1 {
     text-align: center;
@@ -58,8 +51,8 @@ body {
 }
 
 .stopWatch {
-  width: 320px;
-  height: 320px;
+  width: 30.2rem;
+  height: 30.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,17 +73,17 @@ body {
   &::before {
     content: "";
     position: absolute;
-    width: 35px;
-    height: 50px;
-    rotate: 26deg;
-    border-radius: 20%;
-    -webkit-border-radius: 20%;
-    -moz-border-radius: 20%;
-    -ms-border-radius: 20%;
-    -o-border-radius: 20%;
+    width: 3.5rem;
+    height: 5rem;
+    rotate: 24deg;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
     background: #ffffff;
     top: 50px;
-    left: -18px;
+    left: -20px;
   }
 
   & .mins {
@@ -112,8 +105,8 @@ body {
 }
 
 .btn {
-  width: 90px;
-  height: 90px;
+  width: 9rem;
+  height: 9rem;
   font-size: 1.8rem;
   display: flex;
   letter-spacing: 2px;
@@ -161,6 +154,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-align: center;
 
   &::-webkit-scrollbar {
     display: none;
@@ -177,6 +171,13 @@ body {
 @media screen and (width < 500px) {
   html {
     font-size: 55%;
+  }
+  .stopWatch {
+    &::before {
+      content: "";
+      rotate: 21deg;
+      left: -23px;
+    }
   }
 }
 @media screen and (width < 380px) {
