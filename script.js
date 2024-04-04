@@ -11,8 +11,6 @@ let sec = 0;
 let min = 0;
 let setIntervalId;
 
-
-
 const toggleButton = () => {
   resetTime.classList.remove("hidden");
   lapBtn.classList.remove("hidden");
@@ -93,9 +91,12 @@ lapBtn.addEventListener("click", () => {
   p.innerText = `${min} : ${sec} : ${msec}`;
   lapContainer.append(p);
   clearBtn.classList.remove("Clearhidden");
+  lapContainer.style.overflowY = "scroll";
 });
 
+lapContainer.style.overflow = "hidden";
 clearBtn.addEventListener("click", () => {
   lapContainer.innerHTML = "";
   clearBtn.classList.add("Clearhidden");
+  lapContainer.style.overflow = "hidden";
 });
