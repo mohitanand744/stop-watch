@@ -151,18 +151,17 @@ body {
 }
 .laps-container {
   height: 20rem;
-  margin-top: 2rem;
+  width: fit-content;
+  padding: 0 20px;
+  margin: auto;
   margin-bottom: 3rem;
-  overflow: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 1.5rem;
   text-align: center;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   & p {
     font-size: 3rem;
@@ -173,8 +172,8 @@ body {
 }
 .bttn {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 0.6rem;
+  left: 2rem;
   width: 10rem;
   height: 10rem;
   padding: 2%;
@@ -198,4 +197,62 @@ body {
   html {
     font-size: 47%;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1.8rem;
+  -webkit-border-radius: 1.8rem;
+  -moz-border-radius: 1.8rem;
+  -ms-border-radius: 1.8rem;
+  -o-border-radius: 1.8rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(
+    to right top,
+    #fc4fb1,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #c746fa,
+    #b517ff
+  );
+  border-radius: 1.8rem;
+  -webkit-border-radius: 1.8rem;
+  -moz-border-radius: 1.8rem;
+  -ms-border-radius: 1.8rem;
+  -o-border-radius: 1.8rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+    to right top,
+    #6a00ce,
+    #f301c7,
+    #d85aff,
+    #7c30ff,
+    #6363ff,
+    #0936a0,
+    #298dff,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #eeff00,
+    #3eff17
+  );
 }

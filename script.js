@@ -9,6 +9,10 @@ let timer = false;
 let msec = 0;
 let sec = 0;
 let min = 0;
+let setIntervalId;
+
+
+
 const toggleButton = () => {
   resetTime.classList.remove("hidden");
   lapBtn.classList.remove("hidden");
@@ -18,11 +22,12 @@ const toggleButton = () => {
 const start = () => {
   toggleButton();
   timer = true;
-  setInterval(startTimer, 10);
+  setIntervalId = setInterval(startTimer, 10);
 };
 let stop = () => {
   timer = false;
   startTimer();
+  clearInterval(setIntervalId);
 };
 
 let startTimer = () => {
