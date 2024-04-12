@@ -64,14 +64,15 @@ let reset = () => {
   resetTime.classList.add("hidden");
   lapBtn.classList.add("hidden");
   stopBtn.classList.add("hidden");
-  location.reload();
-  /*   document.querySelector(".msec").innerHTML = `00`;
+  startTime.classList.remove("hidden");
+  /* location.reload(); */
+  document.querySelector(".msec").innerHTML = `00`;
   document.querySelector(".sec").innerHTML = `00 :`;
   document.querySelector(".mins").innerHTML = `00 :`;
   msec = 0;
   sec = 0;
   min = 0;
-  timer = false; */
+  timer = false;
 };
 let p;
 startTime.addEventListener("click", () => {
