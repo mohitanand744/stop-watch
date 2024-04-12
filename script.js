@@ -6,9 +6,7 @@ const clearBtn = document.querySelector(".clear");
 let lapContainer = document.querySelector(".laps-container");
 
 let timer = false;
-let msec = 0;
-let sec = 0;
-let min = 0;
+let [msec, sec, min] = [0, 0, 0]
 let setIntervalId;
 
 const toggleButton = () => {
@@ -29,36 +27,23 @@ let stop = () => {
 };
 
 let startTimer = () => {
-  if (timer === true) {
-    ++msec;
+  if (timer !== true) return;
 
-    if (msec === 100) {
-      ++sec;
-
-      msec = 0;
-    }
+  msec++;
+  if (msec === 100) {
+    msec = 0;
+    sec++;
     if (sec === 60) {
-      ++min;
       sec = 0;
-    }
-
-    if (msec < 10) {
-      document.querySelector(".msec").innerHTML = `0${msec}`;
-    } else {
-      document.querySelector(".msec").innerHTML = `${msec}`;
-    }
-    if (sec < 10) {
-      document.querySelector(".sec").innerHTML = `0${sec}  :`;
-    } else {
-      document.querySelector(".sec").innerHTML = `${sec}  :`;
-    }
-    if (min < 10) {
-      document.querySelector(".mins").innerHTML = `0${min}  :`;
-    } else {
-      document.querySelector(".mins").innerHTML = `${min}  :`;
+      min++;
     }
   }
+
+  document.querySelector(".msec").innerHTML = msec < 10 ? `0${msec}` : msec;
+  document.querySelector(".sec").innerHTML = sec < 10 ? `0${sec}  :` : `${sec}  :`;
+  document.querySelector(".mins").innerHTML = min < 10 ? `0${min}  :` : `${min}  :`;
 };
+
 
 let reset = () => {
   resetTime.classList.add("hidden");
@@ -73,6 +58,7 @@ let reset = () => {
   sec = 0;
   min = 0;
   timer = false;
+  clearInterval(setIntervalId);
 };
 let p;
 startTime.addEventListener("click", () => {
