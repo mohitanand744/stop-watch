@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,26 +7,25 @@
   text-decoration: none;
   list-style: none;
 }
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  background-image: linear-gradient(
-    to right top,
-    #d16ba5,
-    #c777b9,
-    #ba83ca,
-    #aa8fd8,
-    #9a9ae1,
-    #8aa7ec,
-    #79b3f4,
-    #69bff8,
-    #52cffe,
-    #41dfff,
-    #46eefa,
-    #5ffbf1
-  );
+  background-image: linear-gradient(to right top,
+      #d16ba5,
+      #c777b9,
+      #ba83ca,
+      #aa8fd8,
+      #9a9ae1,
+      #8aa7ec,
+      #79b3f4,
+      #69bff8,
+      #52cffe,
+      #41dfff,
+      #46eefa,
+      #5ffbf1);
   width: 100%;
   min-height: 100vh;
   font-family: "Rubik Doodle Shadow", system-ui;
@@ -36,6 +36,7 @@ body {
     display: none;
   }
 }
+
 .stopWatch-Container {
   min-height: 100%;
   color: #fff;
@@ -90,9 +91,11 @@ body {
   & .mins {
     font-size: 3.8rem;
   }
+
   & .sec {
     font-size: 3.2rem;
   }
+
   & .msec {
     font-size: 2.9rem;
   }
@@ -141,14 +144,17 @@ body {
       rgba(0, 0, 0, 0.35) 0px -2px 6px 0px inset;
     scale: 1.08;
   }
+
   &:active {
     background: #000000dd;
     scale: 0.8;
   }
 }
+
 .hidden {
   display: none;
 }
+
 .laps-container {
   height: 20rem;
   width: fit-content;
@@ -165,11 +171,14 @@ body {
 
   & p {
     font-size: 3rem;
+    letter-spacing: 2px;
   }
+
   & .time {
     margin-left: 3rem;
   }
 }
+
 .bttn {
   position: absolute;
   bottom: 0.6rem;
@@ -178,13 +187,16 @@ body {
   height: 10rem;
   padding: 2%;
 }
+
 .Clearhidden {
   display: none;
 }
+
 @media screen and (width < 500px) {
   html {
     font-size: 55%;
   }
+
   .stopWatch {
     &::before {
       content: "";
@@ -193,6 +205,7 @@ body {
     }
   }
 }
+
 @media screen and (width < 380px) {
   html {
     font-size: 47%;
@@ -216,21 +229,19 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(
-    to right top,
-    #fc4fb1,
-    #c777b9,
-    #ba83ca,
-    #aa8fd8,
-    #9a9ae1,
-    #8aa7ec,
-    #79b3f4,
-    #69bff8,
-    #52cffe,
-    #41dfff,
-    #c746fa,
-    #b517ff
-  );
+  background-image: linear-gradient(to right top,
+      #fc4fb1,
+      #c777b9,
+      #ba83ca,
+      #aa8fd8,
+      #9a9ae1,
+      #8aa7ec,
+      #79b3f4,
+      #69bff8,
+      #52cffe,
+      #41dfff,
+      #c746fa,
+      #b517ff);
   border-radius: 1.8rem;
   -webkit-border-radius: 1.8rem;
   -moz-border-radius: 1.8rem;
@@ -240,19 +251,17 @@ body {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-image: linear-gradient(
-    to right top,
-    #6a00ce,
-    #f301c7,
-    #d85aff,
-    #7c30ff,
-    #6363ff,
-    #0936a0,
-    #298dff,
-    #69bff8,
-    #52cffe,
-    #41dfff,
-    #eeff00,
-    #3eff17
-  );
+  background-image: linear-gradient(to right top,
+      #6a00ce,
+      #f301c7,
+      #d85aff,
+      #7c30ff,
+      #6363ff,
+      #0936a0,
+      #298dff,
+      #69bff8,
+      #52cffe,
+      #41dfff,
+      #eeff00,
+      #3eff17);
 }

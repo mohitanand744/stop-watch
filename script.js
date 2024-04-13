@@ -8,6 +8,7 @@ let lapContainer = document.querySelector(".laps-container");
 let timer = false;
 let [msec, sec, min] = [0, 0, 0]
 let setIntervalId;
+let count = 0;
 
 const toggleButton = () => {
   resetTime.classList.remove("hidden");
@@ -74,8 +75,9 @@ stopBtn.addEventListener("click", () => {
   stopBtn.classList.add("hidden");
 });
 lapBtn.addEventListener("click", () => {
+  count++
   p = document.createElement("p");
-  p.innerText = `${min} : ${sec} : ${msec}`;
+  p.innerText = `${count} )  ${min} : ${sec} : ${msec}`;
   lapContainer.append(p);
   clearBtn.classList.remove("Clearhidden");
   lapContainer.style.overflowY = "scroll";
@@ -86,4 +88,5 @@ clearBtn.addEventListener("click", () => {
   lapContainer.innerHTML = "";
   clearBtn.classList.add("Clearhidden");
   lapContainer.style.overflow = "hidden";
+  count = 0
 });
